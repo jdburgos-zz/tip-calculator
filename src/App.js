@@ -5,7 +5,15 @@ import React from 'react';
 import './styles/styles.scss';
 
 /** Components **/
+import Wrapper from './components/helpers/Wrapper/Wrapper';
+import Card from './components/ui/Card/Card';
 
-const App = () => <div>App</div>;
+const App = () => (
+  <Wrapper>
+    <Card>
+      <Card background="black-green" />
+    </Card>
+  </Wrapper>
+);
 
 export default App;

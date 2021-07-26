@@ -1,0 +1,10 @@
+.card {
+  background-color: var(--c-white);
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px -12px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+
+  &--black-green {
+    background-color: var(--c-black-green);
+  }
+}
