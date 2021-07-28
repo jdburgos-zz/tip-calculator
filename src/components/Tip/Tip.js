@@ -14,16 +14,24 @@ const Tip = props => {
 
   const selectedClass = selected ? styles['tip--selected'] : '';
   const classes = `${styles['tip']} ${selectedClass}`.trim();
+  let content = `${props.tip.value}%`;
+
+  if (props.tip.type === 'custom') {
+    content = <input className={styles['tip__custom']} type="number" />;
+  }
 
   return (
     <span onClick={selectTipHandler} className={classes}>
-      {props.value}%
+      {content}
     </span>
   );
 };
 
 Tip.propTypes = {
-  value: PropTypes.number,
+  tip: PropTypes.shape({
+    value: PropTypes.number,
+    type: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Tip;

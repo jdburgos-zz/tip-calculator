@@ -10,6 +10,8 @@ import Card from './components/Ui/Card/Card';
 import BillForm from './components/BillForm/BillForm';
 import TipList from './components/TipList/TipList';
 import Container from './components/Layout/Container/Container';
+import PeopleForm from './components/PeopleForm/PeopleForm';
+import Total from './components/Total/Total';
 
 /** Styles **/
 import styles from './App.module.scss';
@@ -21,8 +23,11 @@ const App = () => (
       <Container className={styles['app__container']}>
         <BillForm />
         <TipList />
+        <PeopleForm />
       </Container>
-      <Card background="black-green" />
+      <Card background="black-green">
+        <Total />
+      </Card>
     </Card>
   </Wrapper>
 );

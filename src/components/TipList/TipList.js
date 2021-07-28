@@ -7,10 +7,17 @@ import Tip from '../Tip/Tip';
 /** Styles **/
 import styles from './TipList.module.scss';
 
-const tips = [{ value: 5 }, { value: 10 }, { value: 15 }, { value: 25 }, { value: 50 }];
+const tips = [
+  { value: 5, type: 'tip' },
+  { value: 10, type: 'tip' },
+  { value: 15, type: 'tip' },
+  { value: 25, type: 'tip' },
+  { value: 50, type: 'tip' },
+  { value: null, type: 'custom' },
+];
 
 const TipList = () => {
-  const tipList = tips.map(({ value }, index) => <Tip key={index} value={value} />);
+  const tipList = tips.map((tip, index) => <Tip key={index} tip={tip} />);
 
   return (
     <div className={styles['tip-list__container']}>

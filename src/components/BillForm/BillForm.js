@@ -28,6 +28,7 @@ const BillForm = () => {
             type: 'number',
           }}
           label="Bill"
+          icon="currency"
           error={error}
           onChange={changeBillHandler}
         />

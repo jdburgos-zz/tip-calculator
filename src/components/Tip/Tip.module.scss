@@ -1,7 +1,8 @@
 .tip {
   background-color: var(--c-very-dark-cyan);
-  border-radius: 4px;
+  border-radius: 6px;
   color: var(--c-white);
+  font-size: 24px;
   font-weight: 700;
   padding: 10px 0;
   text-align: center;
@@ -16,5 +17,9 @@
   &--selected {
     background-color: var(--c-light-gray-cyan);
     color: var(--c-very-dark-cyan);
+  }
+
+  &__custom {
+    width: 100%;
   }
 }

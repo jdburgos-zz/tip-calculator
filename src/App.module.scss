@@ -1,6 +1,13 @@
 .app {
   &__title {
-    display: block;
+    color: var(--c-dark-gray-cyan);
+    font-size: 25px;
+    letter-spacing: 10px;
+    line-height: 1.5;
+    margin: 40px auto;
+    text-align: center;
+    width: 105px;
+    word-break: break-all;
   }
 
   &__container {

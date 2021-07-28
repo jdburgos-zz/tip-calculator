@@ -26,6 +26,7 @@ Input.propTypes = {
     type: PropTypes.string.isRequired,
   }).isRequired,
   label: PropTypes.string,
+  icon: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 };
 

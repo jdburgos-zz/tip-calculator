@@ -5,7 +5,8 @@ import React from 'react';
 /** Components **/
 import App from './App';
 
-test('renders without crashing', () => {
+test('should renders without crashing', () => {
   const div = document.createElement('div');
+
   ReactDOM.render(<App />, div);
 });

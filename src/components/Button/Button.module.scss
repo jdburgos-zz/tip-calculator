@@ -1,8 +1,15 @@
 .button {
   background-color: var(--c-strong-cyan);
+  border: 0;
+  border-radius: 6px;
   color: var(--c-very-dark-cyan);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px 0;
+  width: 100%;
 
   &:hover {
     background-color: var(--c-light-gray-cyan);
+    cursor: pointer;
   }
 }
