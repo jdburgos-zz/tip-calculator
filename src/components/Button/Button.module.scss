@@ -1,3 +1,8 @@
 .button {
-  display: block;
+  background-color: var(--c-strong-cyan);
+  color: var(--c-very-dark-cyan);
+
+  &:hover {
+    background-color: var(--c-light-gray-cyan);
+  }
 }

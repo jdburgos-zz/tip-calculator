@@ -1,8 +1,29 @@
 /** React core **/
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const Tip = () => {
-  return <div></div>;
+/** Styles **/
+import styles from './Tip.module.scss';
+
+const Tip = props => {
+  const [selected, setSelected] = useState(false);
+
+  const selectTipHandler = () => {
+    setSelected(prevState => !prevState);
+  };
+
+  const selectedClass = selected ? styles['tip--selected'] : '';
+  const classes = `${styles['tip']} ${selectedClass}`.trim();
+
+  return (
+    <span onClick={selectTipHandler} className={classes}>
+      {props.value}%
+    </span>
+  );
+};
+
+Tip.propTypes = {
+  value: PropTypes.number,
 };
 
 export default Tip;

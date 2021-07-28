@@ -1,0 +1,10 @@
+.app {
+  &__title {
+    display: block;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
