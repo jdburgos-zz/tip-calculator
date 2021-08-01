@@ -11,8 +11,15 @@ const Input = React.forwardRef((props, ref) => {
   const classes = `${styles.input} ${className} ${errorClass}`.trim();
 
   return (
-    <div className={styles.input}>
-      <label htmlFor={props.input.id}>{props.label}</label>
+    <div className={styles['input__container']}>
+      <label className={styles['input__label']} htmlFor={props.input.id}>
+        {props.label}
+      </label>
+      <img
+        className={styles['input__icon']}
+        src={`${process.env.PUBLIC_URL}/images/${props.icon}.svg`}
+        alt={`${props.icon}`}
+      />
       <input onChange={props.onChange} className={classes} ref={ref} {...props.input} />
     </div>
   );

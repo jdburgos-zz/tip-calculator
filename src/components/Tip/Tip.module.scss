@@ -1,4 +1,6 @@
 .tip {
+  $tip: &;
+
   background-color: var(--c-very-dark-cyan);
   border-radius: 6px;
   color: var(--c-white);
@@ -15,7 +17,7 @@
   }
 
   &--selected {
-    background-color: var(--c-light-gray-cyan);
+    background-color: var(--c-strong-cyan);
     color: var(--c-very-dark-cyan);
   }
 

@@ -28,7 +28,7 @@ const PeopleForm = () => {
             type: 'number',
           }}
           label="Number of People"
-          icon="people"
+          icon="icon-person"
           error={error}
           onChange={changePeopleHandler}
         />

@@ -1,3 +1,37 @@
 .input {
-  display: block;
+  background-color: var(--c-light-grayish-cyan);
+  border: 0;
+  border-radius: 6px;
+  color: var(--c-very-dark-cyan);
+  font-size: 27px;
+  font-weight: 700;
+  padding: 10px 5px 10px 35px;
+  text-align: right;
+
+  &:focus-visible {
+    outline: var(--c-strong-cyan) auto 1px;
+  }
+
+  &--error {
+    outline: var(--c-red) auto 1px;
+  }
+
+  &__icon {
+    left: 14px;
+    position: absolute;
+    top: 45px;
+    width: 11px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__label {
+    color: var(--c-dark-gray-cyan);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
 }
