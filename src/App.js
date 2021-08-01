@@ -19,13 +19,13 @@ import styles from './App.module.scss';
 const App = () => (
   <Wrapper>
     <h1 className={styles['app__title']}>SPLITTER</h1>
-    <Card>
+    <Card className={styles['app__main-card']}>
       <Container className={styles['app__container']}>
         <BillForm />
         <TipList />
         <PeopleForm />
       </Container>
-      <Card background="black-green">
+      <Card className={styles['app__total']} background="black-green">
         <Total />
       </Card>
     </Card>

@@ -6,8 +6,9 @@ import PropTypes from 'prop-types';
 import styles from './Card.module.scss';
 
 const Card = props => {
+  const className = props.className ? props.className : '';
   const backgroundClass = props.background ? `${styles[`card--${props.background}`]}` : '';
-  const classes = `${styles.card} ${backgroundClass}`.trim();
+  const classes = `${styles.card} ${className} ${backgroundClass}`.trim();
 
   return <div className={classes}>{props.children}</div>;
 };
@@ -15,6 +16,7 @@ const Card = props => {
 Card.propTypes = {
   children: PropTypes.any,
   background: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Card;
