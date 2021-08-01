@@ -1,20 +1,25 @@
 /** React core **/
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 
 /** Components **/
 import Input from '../Ui/Input/Input';
+
+/** Contexts **/
+import AppContext from '../../store/AppContext';
 
 /** Styles **/
 import styles from './BillForm.module.scss';
 
 const BillForm = () => {
   const [error, setError] = useState(false);
+  const appCtx = useContext(AppContext);
   const billRef = useRef();
 
   const changeBillHandler = () => {
     const billValue = billRef.current.value.trim();
 
     setError(billValue === '');
+    appCtx.setBill(parseInt(billValue, 10));
   };
 
   return (

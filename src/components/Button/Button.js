@@ -7,7 +7,7 @@ import styles from './Button.module.scss';
 
 const Button = props => {
   return (
-    <button type="text" className={styles.button}>
+    <button type="text" className={styles.button} onClick={props.onClick}>
       {props.text}
     </button>
   );
@@ -15,6 +15,7 @@ const Button = props => {
 
 Button.propTypes = {
   text: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Button;

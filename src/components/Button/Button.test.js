@@ -8,5 +8,5 @@ import Button from './Button';
 test('should renders without crashing', () => {
   const div = document.createElement('div');
 
-  ReactDOM.render(<Button />, div);
+  ReactDOM.render(<Button onClick={() => {}} />, div);
 });

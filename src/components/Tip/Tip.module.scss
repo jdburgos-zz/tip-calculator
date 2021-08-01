@@ -22,7 +22,7 @@
   }
 
   &__custom {
-    width: 100%;
+    width: calc(100% - 15px);
 
     &::-webkit-input-placeholder {
       color: var(--c-dark-gray-cyan);

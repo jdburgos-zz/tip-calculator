@@ -23,7 +23,7 @@ TotalItem.propTypes = {
   item: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    value: PropTypes.number.isRequired,
+    value: PropTypes.any.isRequired,
   }).isRequired,
 };
 
