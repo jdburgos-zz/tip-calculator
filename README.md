@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Tip calculator app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is for learn and practice ReactJs.\
+See the app in production - [Tip calculator app](https://tip-calculator-f9ec2.web.app/)
 
 ## Available Scripts
 
@@ -39,32 +40,24 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `npm lint`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Lints the code.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `npm format`
 
-### Code Splitting
+Formats the code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `npm stylelint`
 
-### Analyzing the Bundle Size
+Lints scss/css styles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### `npm analyze`
 
-### Making a Progressive Web App
+Analyzes the bundle sizes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Deploy in Firebase
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Login in to firebase: `firebase login`\
+Build the project: `npm run build`\
+Deploy in firebase: `firebase deploy`

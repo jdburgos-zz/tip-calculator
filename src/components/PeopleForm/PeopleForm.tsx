@@ -1,5 +1,5 @@
 /** React core **/
-import React, { useContext, useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 
 /** Components **/
 import Input from '../Ui/Input/Input';
@@ -13,10 +13,10 @@ import styles from './PeopleForm.module.scss';
 const PeopleForm = () => {
   const [error, setError] = useState(false);
   const appCtx = useContext(AppContext);
-  const peopleRef = useRef();
+  const peopleRef = useRef<HTMLInputElement>(null);
 
   const changePeopleHandler = () => {
-    const peopleValue = peopleRef.current.value.trim();
+    const peopleValue = peopleRef.current!.value.trim();
 
     setError(peopleValue === '');
     appCtx.setNPeople(parseInt(peopleValue, 10));

@@ -1,5 +1,5 @@
 /** React core **/
-import React, { useContext, useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 
 /** Components **/
 import Input from '../Ui/Input/Input';
@@ -13,10 +13,10 @@ import styles from './BillForm.module.scss';
 const BillForm = () => {
   const [error, setError] = useState(false);
   const appCtx = useContext(AppContext);
-  const billRef = useRef();
+  const billRef = useRef<HTMLInputElement>(null);
 
   const changeBillHandler = () => {
-    const billValue = billRef.current.value.trim();
+    const billValue = billRef.current!.value.trim();
 
     setError(billValue === '');
     appCtx.setBill(parseInt(billValue, 10));

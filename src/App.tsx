@@ -1,6 +1,3 @@
-/** React core **/
-import React from 'react';
-
 /** Styles **/
 import './styles/styles.scss';
 
@@ -22,14 +19,14 @@ import styles from './App.module.scss';
 const App = () => (
   <AppProvider>
     <Wrapper>
-      <h1 className={styles['app__title']}>SPLITTER</h1>
+      <h1 className={styles.app__title}>SPLITTER</h1>
       <Card className={styles['app__main-card']}>
-        <Container className={styles['app__container']}>
+        <Container className={styles.app__container}>
           <BillForm />
           <TipList />
           <PeopleForm />
         </Container>
-        <Card className={styles['app__total']} background="black-green">
+        <Card className={styles.app__total} background="black-green">
           <Total />
         </Card>
       </Card>

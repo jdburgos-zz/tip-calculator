@@ -1,6 +1,3 @@
-/** React core **/
-import React from 'react';
-
 /** Components **/
 import Tip from '../Tip/Tip';
 

@@ -1,12 +1,16 @@
 /** React core **/
 import ReactDOM from 'react-dom';
-import React from 'react';
 
 /** Components **/
-import PeopleForm from './PeopleForm';
+import Container from './Container';
 
 test('should renders without crashing', () => {
   const div = document.createElement('div');
 
-  ReactDOM.render(<PeopleForm />, div);
+  ReactDOM.render(
+    <Container className="test-class">
+      <div>Container</div>
+    </Container>,
+    div,
+  );
 });

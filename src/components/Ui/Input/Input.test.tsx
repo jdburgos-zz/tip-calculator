@@ -1,9 +1,10 @@
 /** React core **/
 import ReactDOM from 'react-dom';
-import React from 'react';
 
 /** Components **/
 import Input from './Input';
+
+/** Styles **/
 import styles from '../../BillForm/BillForm.module.scss';
 
 test('should renders without crashing', () => {
@@ -20,6 +21,7 @@ test('should renders without crashing', () => {
       icon="currency"
       error={false}
       onChange={() => {}}
+      ref={null}
     />,
     div,
   );

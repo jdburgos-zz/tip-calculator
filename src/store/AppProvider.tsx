@@ -1,11 +1,14 @@
 /** React core **/
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
 /** Contexts **/
 import AppContext from './AppContext';
 
-const AppProvider = props => {
+type AppProviderProps = {
+  children: React.ReactNode;
+};
+
+const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [bill, setBill] = useState(0);
   const [tip, setTip] = useState(0);
   const [nPeople, setNPeople] = useState(0);
@@ -25,26 +28,26 @@ const AppProvider = props => {
     totalHandler(parseFloat(total.toFixed(2)));
   };
 
-  const billHandler = value => {
+  const billHandler = (value: any) => {
     setBill(value);
     calcTip({ bill: value, tip, nPeople });
   };
 
-  const tipHandler = value => {
+  const tipHandler = (value: any) => {
     setTip(value);
     calcTip({ bill, tip: value, nPeople });
   };
 
-  const nPeopleHandler = value => {
+  const nPeopleHandler = (value: any) => {
     setNPeople(value);
     calcTip({ bill, tip, nPeople: value });
   };
 
-  const tipPerPersonHandler = value => {
+  const tipPerPersonHandler = (value: any) => {
     setTipPerPerson(value);
   };
 
-  const totalHandler = value => {
+  const totalHandler = (value: any) => {
     setTotal(value);
   };
 
@@ -72,11 +75,7 @@ const AppProvider = props => {
     reset: resetHandler,
   };
 
-  return <AppContext.Provider value={appContext}>{props.children}</AppContext.Provider>;
-};
-
-AppProvider.propTypes = {
-  children: PropTypes.any,
+  return <AppContext.Provider value={appContext}>{children}</AppContext.Provider>;
 };
 
 export default AppProvider;

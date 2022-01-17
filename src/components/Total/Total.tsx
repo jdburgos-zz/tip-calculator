@@ -1,5 +1,5 @@
 /** React core **/
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 
 /** Components **/
 import Button from '../Button/Button';
@@ -22,7 +22,7 @@ const Total = () => {
 
   return (
     <Wrapper>
-      <div className={styles['total__items']}>{content}</div>
+      <div className={styles.total__items}>{content}</div>
       <Button text="RESET" onClick={appCtx.reset} />
     </Wrapper>
   );

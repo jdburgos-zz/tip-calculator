@@ -1,12 +1,11 @@
 /** React core **/
 import ReactDOM from 'react-dom';
-import React from 'react';
 
 /** Components **/
-import Button from './Button';
+import App from './App';
 
 test('should renders without crashing', () => {
   const div = document.createElement('div');
 
-  ReactDOM.render(<Button onClick={() => {}} />, div);
+  ReactDOM.render(<App />, div);
 });
