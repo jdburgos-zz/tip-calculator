@@ -13,7 +13,7 @@ import AppContext from '../../store/AppContext';
 type TipProps = {
   tip: {
     type: string;
-    value: number | null;
+    value: number;
   };
 };
 
@@ -35,7 +35,7 @@ const Tip: React.FC<TipProps> = ({ tip }) => {
     appCtx.setTip(parseInt(customTipValue, 10));
   };
 
-  const selectedClass = selected && !appCtx.isReseted ? styles['tip--selected'] : '';
+  const selectedClass = selected && !appCtx.isReset ? styles['tip--selected'] : '';
   const classes = `${styles.tip} ${selectedClass}`.trim();
   let content = <span onClick={selectTipHandler} className={classes}>{`${tip.value}%`}</span>;
 

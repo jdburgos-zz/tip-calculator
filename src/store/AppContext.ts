@@ -1,18 +1,33 @@
 /** React core **/
 import React from 'react';
 
-const AppContext = React.createContext({
+type AppContextType = {
+  bill: number;
+  tip: number;
+  nPeople: number;
+  tipPerPerson: number;
+  total: number;
+  isReset: boolean;
+  setBill: (value: number) => void;
+  setTip: (value: number) => void;
+  setNPeople: (value: number) => void;
+  setTipPerPerson: (value: number) => void;
+  setTotal: (value: number) => void;
+  reset: () => void;
+};
+
+const AppContext = React.createContext<AppContextType>({
   bill: 0,
   tip: 0,
   nPeople: 0,
   tipPerPerson: 0,
   total: 0,
-  isReseted: false,
-  setBill: (value: number) => {},
-  setTip: (value: number | null) => {},
-  setNPeople: (value: number) => {},
-  setTipPerPerson: (value: number) => {},
-  setTotal: (value: number) => {},
+  isReset: false,
+  setBill: value => {},
+  setTip: value => {},
+  setNPeople: value => {},
+  setTipPerPerson: value => {},
+  setTotal: value => {},
   reset: () => {},
 });
 

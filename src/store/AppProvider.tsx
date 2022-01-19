@@ -14,7 +14,7 @@ const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [nPeople, setNPeople] = useState(0);
   const [tipPerPerson, setTipPerPerson] = useState(0);
   const [total, setTotal] = useState(0);
-  const [isReseted, setReset] = useState(false);
+  const [isReset, setReset] = useState(false);
 
   const calcTip = ({ bill = 0, tip = 0, nPeople = 0 }) => {
     const billPerPeople = nPeople !== 0 ? bill / nPeople : 0;
@@ -23,31 +23,30 @@ const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     const tipAmountPerPerson = nPeople !== 0 ? (bill * tipPercentage) / nPeople : 0;
     tipPerPersonHandler(parseFloat(tipAmountPerPerson.toFixed(2)));
 
-    // eslint-disable-next-line
     const total = billPerPeople * tipPercentage + billPerPeople;
     totalHandler(parseFloat(total.toFixed(2)));
   };
 
-  const billHandler = (value: any) => {
+  const billHandler = (value: number) => {
     setBill(value);
     calcTip({ bill: value, tip, nPeople });
   };
 
-  const tipHandler = (value: any) => {
+  const tipHandler = (value: number) => {
     setTip(value);
     calcTip({ bill, tip: value, nPeople });
   };
 
-  const nPeopleHandler = (value: any) => {
+  const nPeopleHandler = (value: number) => {
     setNPeople(value);
     calcTip({ bill, tip, nPeople: value });
   };
 
-  const tipPerPersonHandler = (value: any) => {
+  const tipPerPersonHandler = (value: number) => {
     setTipPerPerson(value);
   };
 
-  const totalHandler = (value: any) => {
+  const totalHandler = (value: number) => {
     setTotal(value);
   };
 
@@ -66,7 +65,7 @@ const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     nPeople,
     tipPerPerson,
     total,
-    isReseted,
+    isReset,
     setBill: billHandler,
     setTip: tipHandler,
     setNPeople: nPeopleHandler,

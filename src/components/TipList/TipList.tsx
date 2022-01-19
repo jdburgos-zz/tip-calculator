@@ -10,7 +10,7 @@ const tips = [
   { value: 15, type: 'tip' },
   { value: 25, type: 'tip' },
   { value: 50, type: 'tip' },
-  { value: null, type: 'custom' },
+  { value: 0, type: 'custom' },
 ];
 
 const TipList = () => {
